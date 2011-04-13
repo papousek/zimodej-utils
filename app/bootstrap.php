@@ -31,9 +31,8 @@ $application->errorPresenter = 'Error';
 {
 	$router = $application->getRouter();
 
-	$router[] = new NRoute('index.php', 'Homepage:default', NRoute::ONE_WAY);
-
-	$router[] = new NRoute('<presenter>/<action>[/<id>]', 'Homepage:default');
+	$router[] = TedModule::createRouter();
+	$router[] = GeneralModule::createRouter();
 };
 
 

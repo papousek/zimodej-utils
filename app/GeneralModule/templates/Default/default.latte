@@ -1,0 +1,13 @@
+{block content}
+<div id="wrapper">
+	<ul id="environment">
+		<li>PHP {=PHP_VERSION}</li>
+		<li n:ifset="$_SERVER['SERVER_SOFTWARE']">Server {$_SERVER['SERVER_SOFTWARE']}</li>
+		<li>Nette Framework {=NFramework::VERSION}</li>
+	</ul>
+</div>
+{/block}
+
+
+{block head}
+{/block}

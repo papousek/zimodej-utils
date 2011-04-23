@@ -1,0 +1,14 @@
+{block content}
+
+	{if !empty($languages)}
+		<ul>
+			{foreach $languages AS $language}
+				<li><a href="{link subtitles, $url, $language}">{$language}</a></li>
+			{/foreach}
+		</ul>
+	{/if}
+{/block}
+
+
+{block head}
+{/block}

@@ -1,0 +1,3 @@
+[submodule "libs/ted-downloader"]
+	path = libs/ted-downloader
+	url = git@github.com:papousek/ted-downloader.git

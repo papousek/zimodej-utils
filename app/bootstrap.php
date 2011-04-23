@@ -11,6 +11,9 @@
 // you don't have to litter your code with 'require' statements
 require LIBS_DIR . '/Nette/loader.php';
 
+$loader = new NRobotLoader();
+$loader->addDirectory(LIBS_DIR);
+$loader->register();
 
 // Enable NDebug for error visualisation & logging
 NDebug::$strictMode = TRUE;

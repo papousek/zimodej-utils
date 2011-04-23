@@ -22,6 +22,7 @@ class Ted_DefaultPresenter extends Ted_BasePresenter
 				header("Content-Type: application/download");
 				header("Content-Type: text/plain");
 				echo $subtitles;
+				die;
 
 			}
 		}

@@ -11,15 +11,15 @@
 // you don't have to litter your code with 'require' statements
 require LIBS_DIR . '/Nette/loader.php';
 
-$loader = new NRobotLoader();
-$loader->addDirectory(LIBS_DIR);
-$loader->setCacheStorage(new NFileStorage(TEMP_DIR . '/cache/_Nette.RobotLoader'));
-$loader->register();
-
 // Enable NDebug for error visualisation & logging
 NDebug::$strictMode = TRUE;
 NDebug::enable();
 
+// register loader
+$loader = new NRobotLoader();
+$loader->addDirectory(LIBS_DIR);
+$loader->setCacheStorage(new NFileStorage(TEMP_DIR . '/cache/_Nette.RobotLoader'));
+$loader->register();
 
 // Load configuration from config.neon file
 NEnvironment::loadConfig();

@@ -18,7 +18,7 @@ NDebug::enable();
 // register loader
 $loader = new NRobotLoader();
 $loader->addDirectory(LIBS_DIR);
-$loader->setCacheStorage(new NFileStorage(TEMP_DIR . '/cache/_Nette.RobotLoader'));
+$loader->setCacheStorage(new NFileStorage(TEMP_DIR . '/cache'));
 $loader->register();
 
 // Load configuration from config.neon file
@@ -38,7 +38,6 @@ $application->errorPresenter = 'Error';
 	$router[] = TedModule::createRouter();
 	$router[] = GeneralModule::createRouter();
 };
-
 
 // Run the application!
 $application->run();

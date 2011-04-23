@@ -15,12 +15,6 @@ require LIBS_DIR . '/Nette/loader.php';
 NDebug::$strictMode = TRUE;
 NDebug::enable();
 
-// register loader
-$loader = new NRobotLoader();
-$loader->addDirectory(LIBS_DIR);
-$loader->setCacheStorage(new NFileStorage(TEMP_DIR . '/cache'));
-$loader->register();
-
 // Load configuration from config.neon file
 NEnvironment::loadConfig();
 

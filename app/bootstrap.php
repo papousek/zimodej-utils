@@ -13,6 +13,7 @@ require LIBS_DIR . '/Nette/loader.php';
 
 $loader = new NRobotLoader();
 $loader->addDirectory(LIBS_DIR);
+$loader->setCacheStorage(new NFileStorage(TEMP_DIR . '/cache/_Nette.RobotLoader'));
 $loader->register();
 
 // Enable NDebug for error visualisation & logging
